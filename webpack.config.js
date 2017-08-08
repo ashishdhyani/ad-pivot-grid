@@ -5,9 +5,9 @@ module.exports = {
   devServer: {
     inline: true,
     contentBase: './src',
-    port: 3000,
+    port: 3000
   },
-  devtool: 'cheap-module-eval-source-map',
+  devtool: 'source-map',
   entry: './dev/js/index.js',
   module: {
     loaders: [
@@ -31,8 +31,9 @@ module.exports = {
     ]
   },
   output: {
-    path: '/C/AshiMinty/Ashish/MyProjects/ServiceDesktop/src',
-    filename: 'js/bundle.min.js'
+    path: path.resolve(__dirname, 'src'),
+    publicPath: '/js/',
+    filename: 'bundle.min.js',
   },
   plugins: [
     new webpack.optimize.OccurrenceOrderPlugin()
