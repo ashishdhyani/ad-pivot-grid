@@ -17,17 +17,9 @@ module.exports = {
         exclude: /node_modules/
       },
       {
-        test: /\.scss/,
-        loaders: 'style-loader!css-loader!sass-loader'
-      },
-      {
         test: /\.css$/,
         loader: 'style!css!'
       },
-      {
-        test: /\.styl$/,
-        loader: 'style-loader!css-loader!stylus-loader'
-      }
     ]
   },
   output: {
